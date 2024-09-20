@@ -18,13 +18,13 @@ This will create a new directory called `hello_world` with a `Cargo.toml` file a
 
 ### Add Krustie to Your Project
 
-To install latest Krustie use the following command in your terminal:
+To install latest Krustie go to your project folder and use the following command in your terminal:
 
 ```sh
 cargo add krustie
 ```
 
-or add the following to your `Cargo.toml` file:
+or add the following lines to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
@@ -42,7 +42,7 @@ fn main() {
     let mut server = Server::create();
     let mut main_router = Router::new();
 
-    main_router.get(|_, res| {
+    main_router.get('/', |_, res| {
         res.status(StatusCode::Ok).body_text("Hello World!");
     });
 
