@@ -42,7 +42,7 @@ fn main() {
     let mut server = Server::create();
     let mut main_router = Router::new();
 
-    main_router.get('/', |_, res| {
+    main_router.get("/", |_, res| {
         res.status(StatusCode::Ok).body_text("Hello World!");
     });
 
